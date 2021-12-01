@@ -1,0 +1,74 @@
+.animal-container {
+    min-height: 60px;
+    position: relative;
+}
+
+.animal-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+
+    gap: 12px;
+
+    &__item {
+        display: block;
+        position: relative;
+        text-decoration: none;
+        font: inherit;
+        color: rgba(white, 0.7);
+
+        border-radius: 20px;
+        overflow: hidden;
+        padding-top: calc(100% * (155 / 250 + 1));
+
+        & > * {
+            pointer-events: none;
+        }
+        
+        h4,
+        p {
+            margin: 0;
+        }
+
+        &__photo,
+        &__description {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        &__photo {
+            top: 0;
+
+            img {
+                display: block;
+                position: absolute;
+                margin: auto;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                --object-fit: cover;
+                --object-position: center top;
+
+                -webkit-object-fit: var(--object-fit);
+                -moz-object-fit: var(--object-position);
+
+                -moz-object-fit: var(--object-fit);
+                -moz-object-position: var(--object-position);
+
+                object-fit: var(--object-fit);
+                object-position: var(--object-position);
+            }
+        }
+
+        &__description {
+            top: auto;
+            padding: 25px 20px;
+
+            background-image: linear-gradient(to top, black, transparent);
+        }
+    }
+}

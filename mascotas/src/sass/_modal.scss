@@ -1,0 +1,202 @@
+.modal-container {
+    --display: none;
+    --animation: none;
+
+    display: var(--display);
+    position: fixed;
+    background-color: rgba(black, 0.7);
+
+    margin: auto;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    overflow: auto;
+    justify-content: center;
+
+    &--hidden {
+        --display: none;
+    }
+
+    &--show {
+        --display: flex;
+        --animation: 300ms ease fadeIn 1;
+    }
+}
+
+.modal-mascotas {
+    --size-icon: 30px;
+    --size-button-like: 45px;
+
+    animation: var(--animation);
+    width: 100%;
+    max-width: 450px;
+    &__photo {
+        position: relative;
+        background-color: darken(white, 80);
+        border: 1p solid white;
+        padding-top: calc(100% * (3/2));
+
+        &__exit {
+            --size: 45px;
+
+            border-radius: calc(var(--size) / 2);
+            width: var(--size);
+            height: var(--size);
+
+            background-color: $color-secundario;
+            color: rgba(white, 0.7);
+
+            right: auto;
+            bottom: auto;
+
+            --gap: 20px;
+
+            left: var(--gap);
+            top: var(--gap);
+
+            z-index: 3;
+
+            padding: 10px;
+
+            svg {
+                display: block;
+            }
+        }
+        
+        img, &__exit {
+            display: flex;
+            position: absolute;
+            margin: auto;
+            font-size: 1.4rem;
+            color: white;
+            align-items: center;
+            justify-content: center;
+
+            z-index: 1;
+        }
+
+        img {
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            
+            --object-fit: cover;
+            --object-position: center top;
+
+            -webkit-object-fit: var(--object-fit);
+            -webkit-object-position: var(--object-position);
+
+            -moz-object-fit: var(--object-fit);
+            -moz-object-position: var(--object-position);
+
+            object-fit: var(--object-fit);
+            object-position: var(--object-position);
+
+            z-index: 0;
+        }
+    }
+
+    &__container {
+        position: relative;
+        margin-top: -30px;
+        border-radius: 30px 30px 0 0;
+        background-color: darken(white, 5);
+        color: $color;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+
+        transition: 300ms ease;
+        z-index: 2;
+
+        &__title {
+            justify-content: space-between;
+            
+            &, &__inner {
+                display: flex;
+                align-items: center;
+            }
+
+            &__inner {
+                h3 {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    margin-right: 10px;
+                }
+
+                img {
+                    width: calc(var(--size-button-like) * (0.5));
+                    
+                }
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: calc(var(--size-button-like) / 2);
+                    background-color: darken(white, 3);
+                    border: 1px solid white;
+                    box-shadow: 0 0 10px silver;
+                    width: var(--size-button-like);
+                    height: var(--size-button-like);
+                }
+            }
+        }
+
+        &__location {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: var(--size-icon);
+                height: auto;
+                margin-right: 10px;
+            }
+        }
+
+        &__history {
+            padding: 30px 0;
+
+            h3 {
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+
+            p {
+                margin-top: 0;
+                line-height: 1.6;
+            }
+        }
+    }
+}
+
+.grid-personality {
+    --size-icon: 40px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+
+    &__item {
+        border: 3px solid darken(white, 30);
+        border-radius: 10px;
+        text-align: center;
+        padding: 10px;
+
+        img {
+            width: var(--size-icon);
+            height: auto;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+        transform: scale(0.98);
+    }
+}

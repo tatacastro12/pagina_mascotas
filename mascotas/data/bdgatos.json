@@ -1,0 +1,76 @@
+{
+    "gatos": [
+        {
+            "id": 1,
+            "nombre": "Pelusa",
+            "raza": "Siames",
+            "anio": "año1",
+            "personalidad": [
+                {
+                    "imagen": "src/imgadopcion/caracteristicas-1.png",
+                    "es": "Juguetón"
+                },
+                {
+                    "imagen": "src/imgadopcion/inquieto.png",
+                    "es": "Inquieto"
+                },
+                {
+                    "imagen": "src/imgadopcion/caracteristicas.png",
+                    "es": "Tierno"
+                }
+            ],
+            "historia": "Busca hogar permanente.",
+            "imagen": "src/imgadopcion/Cardg.png",
+            "genero": "Hembra",
+            "ubicacion": "4140 Parker Nuevo México 31140"
+        },
+        {
+            "id": 2,
+            "nombre": "Kity",
+            "raza": "Bombay",
+            "anio": "año1",
+            "personalidad": [
+                {
+                    "imagen": "src/imgadopcion/caracteristicas-1.png",
+                    "es": "Juguetón"
+                },
+                {
+                    "imagen": "src/imgadopcion/inquieto.png",
+                    "es": "Inquieto"
+                },
+                {
+                    "imagen": "src/imgadopcion/caracteristicas.png",
+                    "es": "Tierno"
+                }
+            ],
+            "historia": "Busca hogar permanente.",
+            "imagen": "src/imgadopcion/Card (1).png",
+            "genero": "Hembra",
+            "ubicacion": "New Jersey"
+        },
+        {
+            "id": 3,
+            "nombre": "Bombon",
+            "raza": "Gato Americano",
+            "anio": "año1",
+            "personalidad": [
+                {
+                    "imagen": "src/imgadopcion/caracteristicas-1.png",
+                    "es": "Juguetón"
+                },
+                {
+                    "imagen": "src/imgadopcion/inquieto.png",
+                    "es": "Inquieto"
+                },
+                {
+                    "imagen": "src/imgadopcion/caracteristicas.png",
+                    "es": "Tierno"
+                }
+            ],
+            "historia": "busca hogar permanente .",
+            "imagen": "src/imgadopcion/Card (3).png",
+            "genero": "Macho",
+            "ubicacion": "Canada"
+        }
+    ]
+}

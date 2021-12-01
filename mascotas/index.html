@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adopción de mascotas</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <template id="loading-template">
+        <div class="caja loading giro-constante" id="loading">
+            <svg viewBox="0 0 140 140" class="lienzo giro-intervalo">
+                <!-- Circunferencia con borde fijo-->
+                <!-- <circle class="cir cir--fijo" cx="70" cy="70" r="65" /> -->
+                
+                <!-- Circunferencia con borde animado -->
+                <circle class="cir cir--completando giro-trazo" cx="70" cy="70" r="65" />
+            </svg>
+        </div>
+    </template>
+
+    <main>
+        <header class="header">
+            <div class="navigation navigation--header">
+                <div class="logo">
+                    <a href="#" class="logo__image" data-svg="src/multimedia/icons/patas.xml" aria-label="Logotipo"></a>
+                    <div class="logo__text">Usuario</div>
+                </div>
+
+
+                <ul class="menu" id="menu-header">
+                    <li class="li menu__item"><a href="src/html/profile.html" class="menu__item__enlace">Perfil</a></li>
+                    <li class="li menu__item"><a href="src/html/mascotas.html" class="menu__item__enlace">Mascotas</a>
+                    </li>
+                    <li class="li menu__item"><a href="src/html/registro.html" class="menu__item__enlace">Registro</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="container" id="container"></div>
+
+        <footer class="footer">
+            <div class="footer__inner">
+                Tatiana Castro
+            </div>
+        </footer>
+    </main>
+
+    <div class="modal-container" id="modal-container">
+        <div class="modal-mascotas" id="modal-mascotas">
+            <header class="modal-mascotas__photo">
+                <button class="modal-mascotas__photo__exit" id="exit-modal" data-svg="src/multimedia/icons/volver.xml" aria-label="x"></button>
+
+                <img src="src/imgadopcion/img-1.png" alt="Masacota de prueba" id="photo-mascota" />
+            </header>
+
+            <section class="modal-mascotas__container">
+                <div class="modal-mascotas__container__title">
+                    <div class="modal-mascotas__container__title__inner">
+                        <h3 id="title-mascota">Matilde</h3>
+                        <img src="src/imgadopcion/Component 5.png" alt="Hembra">
+                    </div>
+
+                    <div class="modal-mascotas__container__title__inner">
+                        <button>
+                            <img src="src/imgadopcion/Union-1.png" alt="Me Gusta">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="modal-mascotas__container__location">
+                    <img src="src/imgadopcion/Component 1.png" alt="Ubicación">
+                    <p id="location-mascota">4140 Parker Nuevo México 31140</p>
+                </div>
+
+                <div class="modal-mascotas__container__personality">
+                    <h4>Personalidad</h4>
+
+                    <div class="grid-personality" id="personality-mascota">
+                        <div class="grid-personality__item">
+                            <img src="src/imgadopcion/caracteristicas-1.png" alt="Juguetón" />
+                            <p>Juguetón</p>
+                        </div>
+
+                        <div class="grid-personality__item">
+                            <img src="src/imgadopcion/inquieto.png" alt="Inquieto" />
+                            <p>Inquieto</p>
+                        </div>
+
+                        <div class="grid-personality__item">
+                            <img src="src/imgadopcion/caracteristicas.png" alt="Tierno" />
+                            <p>Tierno</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-mascotas__container__history" id="history-mascota">
+                    <h3>Historia de Matilde</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, reiciendis voluptates! Deleniti similique illum fugiat tenetur magnam! Nemo in nostrum modi vel officiis tempora odio!</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="src/js/md5.js"></script>
+    <script src="src/js/main.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!-- Contenedor principal de formulario -->
+<div class="perfil-form">
+    <h4 class="perfil-form__title">Perfil</h4>
+
+    <!-- Foto de perfil -->
+    <div class="perfil-form__photo">
+        <img src="https://cdn.pixabay.com/photo/2017/04/05/10/45/girl-2204622_960_720.jpg" alt="Foto de perfil">
+        <p>Tatiana Castro</p>
+        <p><a href="#" class="perfil-form__photo__enlace">Editar cuenta</a></p>
+    </div>
+
+    <!-- Formulario de perfil -->
+    <form action="#" method="get" class="form" id="profile-form">
+        <label class="form__text">
+            <span>Nombre</span>
+            <input type="text" name="name" id="name" required="" placeholder="Tatiana">
+        </label>
+
+        <label class="form__text">
+            <span>Apellido</span>
+            <input type="text" name="lastname" id="lastname" required="" placeholder="Castro">
+        </label>
+
+        <label class="form__text">
+            <span>Correo electrónico:</span>
+            <input type="email" name="email" id="email" required="" placeholder="tatiana@ejemplo.com">
+        </label>
+
+        <div class="group-buttons form__buttons">
+            <button type="submit" class="form__buttons__button">Guardar</button>
+        </div>
+    </form>
+</div>

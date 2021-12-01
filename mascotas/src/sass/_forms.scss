@@ -1,0 +1,359 @@
+[type="text"],
+[type="email"],
+[type="number"],
+[type="password"] {
+    padding: 0 10px;
+}
+
+[type="text"],
+[type="email"],
+[type="number"],
+[type="password"],
+textarea {
+    border: 1px solid;
+    min-height: 30px;
+    font: inherit;
+    transition: 300ms ease;
+    outline: medium none;
+    border-radius: 4px;
+
+    &:focus {
+        box-shadow: inset 0 0 5px rgba(black, 0.3);
+    }
+}
+
+textarea {
+    padding: 10px;
+}
+
+button,
+[type="button"],
+[type="submit"],
+[type="reset"] {
+    background-image: none;
+    transition: 300ms ease;
+    min-height: 35px;
+    padding: 2px 10px;
+    border: 0;
+    border-radius: 4px;
+    font: {
+        family: inherit;
+        size: 0.9rem;
+    }
+
+    &:not([class]) {
+        background-color: darken(white, 10);
+    }
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:active {
+        opacity: 1;
+        transition: none;
+    }
+}
+
+.perfil-form {
+    --padding: 20px;
+
+    margin: 0 auto;
+
+    background-color: $color-base;
+    padding-top: calc(var(--padding) * 2);
+    padding-bottom: calc(var(--padding) * 2);
+    border: 1px solid darken($color-base, 20);
+    border-radius: 5px;
+
+    box-shadow: 4px 4px 0 0 rgba(white, 0.4);
+
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+
+    max-width: 400px;
+    min-width: 350px;
+
+    &__photo {
+        margin: 20px auto;
+        padding: 10px;
+
+        --diametro: 250px;
+
+        width: var(--diametro);
+        text-align: center;
+
+        img {
+            border-radius: 50%;
+            width: calc(var(--diametro) / 2);
+            height: calc(var(--diametro) / 2);
+
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        &__enlace {
+            text-decoration: none;
+            transition: 300ms ease;
+            color: darken($color-base, 70);
+            font-weight: 600;
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+            &:active {
+                opacity: 1;
+                transition: none;
+            }
+        }
+    }
+
+    &__title {
+        font: {
+            size: 1.5rem;
+        }
+
+        margin: 0;
+    }
+}
+
+.form {
+    --field-height: 40px;
+
+    // padding-left: var(--padding);
+    // padding-right: var(--padding);
+
+    &__text {
+        --fondo: white;
+        --border-color: #{darken(white, 40)};
+        --border: 1px solid;
+        
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        font-weight: 300;
+        
+        &--pass {
+            $color: rgb(0, 95, 0);
+            --fondo: #{darken($color, 1)};
+            --color: white;
+            --border-color: white;
+
+            --border: 3px solid;
+
+        }
+
+        span,
+        input {
+            display: block;
+        }
+
+        input {
+            height: var(--field-height);
+            background-color: var(--fondo);
+            color: var(--color);
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            border: var(--border) var(--border-color);
+            margin-top: 5px;
+        }
+        
+        textarea {
+            min-height: 100px;
+            resize: none;
+        }
+    }
+
+    &__buttons {
+        &__button {
+            display: block;
+            width: 100%;
+            background-color: $color-secundario;
+            color: white;
+            border: 0;
+            min-height: var(--field-height);
+            border-radius: calc(var(--field-height));
+
+            &:hover {
+                background-color: lighten($color-secundario, 10);
+            }
+
+            &:active {
+                background-color: $color-secundario;
+                transition: none;
+            }
+        }
+    }
+
+    // Grupo de campos:
+    &__group-fields {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        gap: 10px;
+
+        place-items: end;
+        margin: 20px auto;
+    }
+}
+
+// Contenedor de botones:
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    &__text {
+        @media screen and (max-width: 800px) {
+            width: 100%;
+            text-align: center;
+        }
+
+        @media screen and (min-width: 801px) {
+            max-width: 300px;
+        }
+    }
+}
+
+// Botón de animales:
+.button {
+    --height: 35px;
+    --icon-size: calc(var(--height) * 0.8);
+    --gap: 10px;
+
+    --size-loading: calc(var(--height) * 0.8);
+
+    min-height: var(--height);
+    flex-grow: 1;
+    text-align: center;
+    padding-right: var(--gap);
+    outline: medium none;
+
+    background-color: transparent;
+    color: white;
+    transition: 300ms ease;
+
+    &:focus {
+        box-shadow: 0 0 10px rgba($color-secundario, 0.6);
+    }
+
+    &--dog,
+    &--cat {
+        --height: 100px;
+
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 4px;
+        transition: 300ms ease;
+        cursor: default;
+        max-width: calc(var(--height) * 3);
+        color: white;
+        text-decoration: none;
+
+        & > * {
+            pointer-events: none;
+        }
+    }
+    
+    &--dog {
+        background-color: $color;
+    }
+
+    &--cat {
+        background-color: desaturate($color, 70);
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        transition: none;
+        opacity: 1;
+    }
+
+    &__image {
+        position: relative;
+        background-color: rgba(white, 0.4);
+        overflow: hidden;
+        width: var(--icon-size);
+        height: var(--icon-size);
+
+        border-radius: calc(var(--icon-size) / 2);
+        margin-right: var(--gap);
+        margin-left: var(--gap);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            max-width: calc(var(--icon-size) * 0.6);
+            max-height: calc(var(--icon-size) * 0.8);
+        }
+    }
+
+    &__container {
+        p,
+        h3 {
+            margin: 0;
+        }
+    }
+
+    &--success {
+        background-color: #005aa3;
+    }
+
+    &--danger {
+        background-color: #d60000;
+        color: white;
+    }
+
+    &--primary {
+        background-color: $color;
+    }
+}
+
+// Formulario de registro:
+.form-register {
+    &__text {
+        margin-bottom: 10px;
+        min-height: 50px;
+
+        &,
+        span {
+            display: block;
+        }
+    }
+}
+
+.group-buttons {
+    --display: block;
+    display: var(--display);
+
+    margin-top: 30px;
+
+    &--distribute {
+        --display: flex;
+
+        & > * {
+            flex-grow: 1;
+            
+            &:not(:last-of-type) {
+                margin-right: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+{
+    "perros": [
+        {
+            "id": 1,
+            "nombre": "Papi",
+            "raza": "Chiguagua",
+            "anio": 3,
+            "personalidad": [
+                {
+                    "imagen": "src/imgadopcion/caracteristicas-1.png",
+                    "es": "Juguetón"
+                },
+                {
+                    "imagen": "src/imgadopcion/inquieto.png",
+                    "es": "Inquieto"
+                },
+                {
+                    "imagen": "src/imgadopcion/caracteristicas.png",
+                    "es": "Tierno"
+                }
+            ],
+            "historia": "Busca hogar permanente.",
+            "imagen": "src/imgadopcion/Card.png",
+            "genero": "Macho",
+            "ubicacion": "Venezuela"
+        },
+        {
+            "id": 2,
+            "nombre": "Pixa Dog",
+            "raza": "Cockeer Spaniel",
+            "anio": 3,
+            "personalidad": [
+                {
+                    "imagen": "src/imgadopcion/caracteristicas-1.png",
+                    "es": "Juguetón"
+                },
+                {
+                    "imagen": "src/imgadopcion/inquieto.png",
+                    "es": "Inquieto"
+                },
+                {
+                    "imagen": "src/imgadopcion/caracteristicas.png",
+                    "es": "Tierno"
+                }
+            ],
+            "historia": "Busca hogar permanente.",
+            "imagen": "https://cdn.pixabay.com/photo/2020/03/31/19/20/dog-4988985__340.jpg",
+            "genero": "Macho",
+            "ubicacion": "Estados Unidos (EEUU)"
+        },
+        {
+            "id": 3,
+            "nombre": "Pixa Dog | Prueba",
+            "raza": "Raza del perro",
+            "anio": 3,
+            "personalidad": [
+                {
+                    "imagen": "src/imgadopcion/caracteristicas-1.png",
+                    "es": "Juguetón"
+                },
+                {
+                    "imagen": "src/imgadopcion/inquieto.png",
+                    "es": "Inquieto"
+                },
+                {
+                    "imagen": "src/imgadopcion/caracteristicas.png",
+                    "es": "Tierno"
+                }
+            ],
+            "historia": "Busca hogar permanente.",
+            "imagen": "src/imgadopcion/img-2.png",
+            "genero": "Macho",
+            "ubicacion": "México"
+        }
+    ]
+}
